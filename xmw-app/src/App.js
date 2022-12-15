@@ -1,4 +1,4 @@
-import Test from "./components/test/Test";
+import Test from "./components/todolist/Test";
 
 function App() {
   return (
