@@ -11,9 +11,12 @@ export default class Bottom extends React.Component{
                 return res
             }
         })
+        const bottomChecked=listVal.length&&checkedNum.length===listVal.length
+        const disabled = listVal.length?false:true
+        // console.log(bottomChecked)
         return(
             <div>
-                <input type="checkbox" onChange={handleBottomChange} checked={checkedNum.length===listVal.length}/>
+                <input type="checkbox" onChange={handleBottomChange} checked={bottomChecked} disabled={disabled} />
                 <span>选中的：{checkedNum.length}</span>
                 <span>展示：{listVal.length}</span>
             </div>

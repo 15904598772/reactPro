@@ -33,12 +33,12 @@ export default class Test extends React.Component{
     // 勾选
     handleChange=(e,id)=>{
         const {listVal} = this.state
-        console.log(e.target.checked,id)
+        // console.log(e.target.checked,id)
         const newList = listVal.map(res=>{
             if(id===res.id){
                 res.done=e.target.checked
             }
-            console.log(res)
+            // console.log(res)
             return res
         })
         this.setState({
