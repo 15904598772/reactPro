@@ -1,6 +1,6 @@
 import React from "react";
 import store from "../../redux/store";
-import incrementActionCreator from '../../redux/count_action'
+import {incrementActionCreator,decrementActionCreator} from '../../redux/count_action'
 
 export default class Count extends React.Component{
     number=React.createRef()
@@ -14,6 +14,12 @@ export default class Count extends React.Component{
         store.dispatch(incrementActionCreator(numberNode*1))
         this.setState({})
     }
+    decrement=()=>{
+        let numberNode=this.number.current.value
+        // 调用Action的方法,通过dispatch将action传给store
+        store.dispatch(decrementActionCreator(numberNode*1))
+        this.setState({})
+    }
     render(){
         return(
             <div>
@@ -25,6 +31,7 @@ export default class Count extends React.Component{
                     <option value="3">3</option>
                 </select>
                 <button onClick={this.increment}>加</button>
+                <button onClick={this.decrement}>减</button>
             </div>
         )
     }
