@@ -1,0 +1,13 @@
+.box{
+    padding: 10px 200px;
+}
+.userInp,.authorInp,.loginBtn{
+    /* display: inline; */
+    margin: 10px;
+}
+.authorBox{
+    display: flex;
+}
+.authorBox button{
+    margin-top: 10px;
+}
